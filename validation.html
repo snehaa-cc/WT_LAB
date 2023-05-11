@@ -1,0 +1,61 @@
+<html>
+    <style>
+        body{
+            text-align: center;
+                margin-top:200px;
+                background-image:url(https://media.istockphoto.com/id/1286332849/photo/beautiful-pastel-peony-floral-background-soft-pastel-wedding-romantic-flowers-banner-for.jpg?b=1&s=170667a&w=0&k=20&c=BHerO4j7tsIDqIiXuc10iKYFq2dQB5PKUSiJSLsOzvU=);
+                background-repeat:no-repeat;
+                background-size:cover;
+                color:palevioletred
+        }
+        .val
+        {
+            text-decoration: none;
+            position:absolute;
+            text-align:center;
+            top:40%;
+           left:40%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        </style>
+    <body>
+        <script type="text/javascript">  
+            function validate(){  
+            var name=document.f1.name.value;  
+            var passwordlength=document.f1.password.value.length;  
+            var status=false;  
+            if(name==""){  
+            document.getElementById("namelocation").innerHTML=  
+            " <img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/> Please enter your name";  
+            status=false;
+            }else{  
+            document.getElementById("namelocation").innerHTML=" <img src='http://www.javatpoint.com/javascriptpages/images/checked.gif'/>";  
+            status=true;
+            }  
+              
+            if(passwordlength<6){  
+            document.getElementById("passwordlocation").innerHTML=  
+            " <img src='http://www.javatpoint.com/javascriptpages/images/unchecked.gif'/> Password must be greater than 6";  
+            status=false; 
+            }else{  
+            document.getElementById("passwordlocation").innerHTML=" <img src='http://www.javatpoint.com/javascriptpages/images/checked.gif'/>";  
+            }  
+              
+            return status;  
+            }  
+            </script>  
+            <div class=val>
+            <form name="f1" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validate()">  
+            <table>
+            <tr class:val><td>Name:</td><td><input type="text" name="name"/>  
+            <span id="namelocation" style="color:red"></span></td></tr> 
+            <tr class:val><td>Password:</td><td><input type="password" name="password"/>  
+            <span id="passwordlocation" style="color:rgb(30, 18, 18)"></span></td></tr>
+            <tr><td colspan="2"><a href="drop.html"><input type="submit" value="register"/></a>  </td></tr>
+            </table>
+
+            </form>  
+        </div>
+
+    </body>
+</html>
